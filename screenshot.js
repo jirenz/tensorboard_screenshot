@@ -38,4 +38,7 @@ if (process.argv.length < 6 || process.argv[2] == '-h' || process.argv[2] == '--
   console.log('Usage: node screenshot.js url save_path width height');
   process.exit(0);
 }
-save_page(process.argv[2], process.argv[3], parseInt(process.argv[4]), parseInt(process.argv[5]));
+save_page(process.argv[2], 
+          process.argv[3], 
+          parseInt(process.argv[4]), 
+          parseInt(process.argv[5])).catch((err) => (console.log(err)));
